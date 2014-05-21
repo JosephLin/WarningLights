@@ -18,7 +18,7 @@
         [self setOn:YES];
         [self setHue:hue];
         [self setTransitionTime:time];
-        [self setBrightness:bri];
+//        [self setBrightness:bri];
         [self setSaturation:sat];
         [self setAlert:HueLightAlertTypeNone];
         [self setEffect:HueLightEffectTypeNone];

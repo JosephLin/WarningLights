@@ -371,7 +371,7 @@ static const uint16_t greenHue = 26000;
             [light syncWithCompletionBlock:^{
                 // Save previous light state
                 [light pushState];
-                [light fadeLightToHue:redHue sat:255 bri:255 overTransitionTime:20];
+                [light fadeLightToHue:redHue sat:255 bri:255 overTransitionTime:5];
                 [light popStateWithTransitionTime:20];
             }];
         }
@@ -380,9 +380,9 @@ static const uint16_t greenHue = 26000;
         if (warnings > 0 && ((options & WLMenuItemToggleTypeWarning) == WLMenuItemToggleTypeWarning))
         {
             [light syncWithCompletionBlock:^{
-                [light pushState];
-                [light fadeLightToHue:orangeHue sat:255 bri:255 overTransitionTime:20];
-                [light popStateWithTransitionTime:20];
+//                [light pushState];
+                [light fadeLightToHue:orangeHue sat:255 bri:255 overTransitionTime:5];
+//                [light popStateWithTransitionTime:20];
             }];
         }
         
@@ -390,9 +390,9 @@ static const uint16_t greenHue = 26000;
         if (analyzed > 0 && ((options & WLMenuItemToggleTypeAnalyze) == WLMenuItemToggleTypeAnalyze))
         {
             [light syncWithCompletionBlock:^{
-                [light pushState];
-                [light fadeLightToHue:blueHue sat:255 bri:255 overTransitionTime:20];
-                [light popStateWithTransitionTime:20];
+//                [light pushState];
+                [light fadeLightToHue:blueHue sat:255 bri:255 overTransitionTime:5];
+//                [light popStateWithTransitionTime:20];
             }];
         }
         
@@ -400,9 +400,9 @@ static const uint16_t greenHue = 26000;
         if (errors + warnings + analyzed == 0 && ((options & WLMenuItemToggleTypeSuccess) == WLMenuItemToggleTypeSuccess))
         {
             [light syncWithCompletionBlock:^{
-                [light pushState];
-                [light fadeLightToHue:greenHue sat:255 bri:255 overTransitionTime:20];
-                [light popStateWithTransitionTime:20];
+//                [light pushState];
+                [light fadeLightToHue:greenHue sat:255 bri:255 overTransitionTime:5];
+//                [light popStateWithTransitionTime:20];
             }];
         }
     }];
